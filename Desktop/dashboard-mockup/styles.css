@@ -59,13 +59,12 @@
 
 
 .header {
-    color: white;
-    background-color: rgb(6, 91, 94);
+    color: rgb(0, 0, 0);
+    background-color: rgb(170, 255, 0);
     display: grid;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-template-columns: 3fr 2fr;
-  
 }
 
 .header-right {
@@ -73,28 +72,51 @@
     flex-direction: column;
     justify-content: center;
 
-    align-items: end;
+    align-items: center;
     margin-right: 4em;
-    gap: 2em;
+    /* gap: 2em; */
 }
 
-.header-right-text > p {
+.header-right-text {
    font-size: 1.1em;
-   
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   margin-top: 1em;
+
+}
+.header-right-text > img {
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    object-fit: cover;
+    /* margin-top: 0.5em; */
+ 
 }
 
+.header-right-text p {
+    padding-left: .5em;
+    padding-top: .2em;
+    margin-bottom: 1em;
+}
 .buttons {
     display: flex;
     justify-items: space-evenly;
+    margin-bottom: 1em;
     gap: 2em;  
 }
 
-button {
+ .header button {
     padding-left: 1.5em;
     padding-right: 1.5em;
     border-radius: 1em;
-    border-color: transparent
+    padding-top: .2em;
+    padding-bottom: 0.2em;
+    border: 1px solid rgb(170, 255, 0);
+    background-color: rgb(0, 0, 0);
+    color:rgb(170, 255, 0);
 }
+
 
 .header-left {
     display: flex;
@@ -103,12 +125,22 @@ button {
     
     align-items: start;
     margin-left: 4em;
-    gap: 1em;
+    gap: .5em;
+    padding: 0.5em;
 }
 
 input {
     width: 100%;
-    margin-top: .5em;
+    margin-top: 1em;
+    border-radius: .8em;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+}
+
+input::placeholder {
+    color: rgb(170, 255, 0); 
+    opacity: 1; 
 }
 
 
@@ -119,7 +151,7 @@ span {
 
 
 .navbar {
-    background-color: rgb(237, 74, 45);
+    background-color: rgb(0, 0, 0);
     color: white;
     display: grid;
     grid-template-rows: 100px 1fr 5fr;
@@ -127,7 +159,9 @@ span {
     grid-row-end: 4;
 }
 
+
 h4 {
+    color: rgb(170, 255, 0);
     font-size: 1.7em;
     font-weight: bolder;
     text-align: left;
@@ -154,7 +188,7 @@ ul * {
 }
 
 .settings {
-    margin-top: 2.5em;
+    margin-top: 8em;
 }
 
 li {
@@ -165,25 +199,25 @@ li {
 }
 
 .content-section {
-    background-color: rgb(225, 241, 255);
+    background-color: rgb(255, 255, 255);
     color: rgb(57, 57, 57);
     display: grid;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
-    gap: 1em;
+    /* gap: 1em; */
     
    
 }
 
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 72px 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 48px 1fr 1fr 1fr;
     align-items: start;
     grid-auto-flow: row;
-    gap: 1.5em;
+    gap: 2em;
     margin-bottom: 2em;
     margin-right: 0.5em;
     
@@ -191,51 +225,83 @@ li {
     
 }
 
+.action-btn svg {
+    width: 24px; /* Adjust width */
+    height: 24px; /* Adjust height */
+    stroke: rgb(170, 255, 0); /* Change the color */
+    margin-left: 6px;
+  }
+
+.action-btn {
+    background-color: rgb(170, 255, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1em;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    font-weight: medium;
+    font-size: small;
+    display: grid;
+    grid-column: -1 / -2;
+    grid-row: 3 / 4;
+    grid-auto-flow: column;
+    align-items: center;
+    
+   
+}
+
 .outside-card-1 {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
     margin-left: 2em;
-    margin-bottom: 0;
+    /* margin-bottom: 0; */
     
-    padding-top: 2em;
+    padding-top: 1.5em;
     font-size: large;
     font-weight: bold;
     align-items: end;
 
 }
 
-/* .card1 {
-    background-color: white;
-    border-left: 8px solid rgb(191, 0, 255);
-    margin-left: 2em;
-    padding: 1em;
-} */
+
 
 .inside-card-1 {
     background-color: white;
     border-left: 8px solid rgb(213, 166, 58);
     margin-left: 2em;
-   
     border-radius: 0.5em;
     padding: 1em;
     box-sizing: border-box;
+    box-shadow: 2px 1px 2px rgb(170, 255, 0);
     width: 80%;
     height: 100%;
-
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
+   
 }
-.card3 {
+
+img {
+    border-radius: .3em;
+    margin-bottom: .8em;
+}
+.inside-card-3 {
     background-color: white;
     border-left: 8px solid rgb(255, 47, 0);
-    margin-left: 2em;
-
     border-radius: 0.5em;
     padding: 1em;
     box-sizing: border-box;
+    box-shadow: 2px 1px 2px rgb(170, 255, 0);
     width: 80%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
 }
-.card4 {
+.inside-card-4 {
     background-color: white;
     border-left: 8px solid rgb(0, 26, 255);
     margin-left: 2em;
@@ -243,22 +309,30 @@ li {
     padding: 1em;
     border-radius: 0.5em;
     box-sizing: border-box;
+    box-shadow: 2px 1px 2px rgb(170, 255, 0);
     width: 80%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
 }
-.card5 {
+.inside-card-5 {
     background-color: white;
     border-left: 8px solid rgb(8, 116, 19);
-    margin-left: 2em;
-  
     border-radius: 0.5em;
     padding: 1em;
     box-sizing: border-box;
+    box-shadow: 2px 1px 2px rgb(170, 255, 0);
     width: 80%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
 }
 
-.card7 {
+.inside-card-7 {
     background-color: white;
     border-left: 8px solid rgb(140, 213, 255);
     margin-left: 2em;
@@ -266,19 +340,27 @@ li {
     border-radius: 0.5em;
     padding: 1em;
     box-sizing: border-box;
+    box-shadow: 2px 1px 2px rgb(170, 255, 0);
     width: 80%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
 }
-.card8 {
+.inside-card-8{
     background-color: white;
     border-left: 8px solid rgb(119, 108, 49);
-    margin-left: 2em;
- 
     border-radius: 0.5em;
     padding: 1em;
     box-sizing: border-box;
+    box-shadow: 2px 1px 2px rgb(170, 255, 0);
     width: 80%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: column;
 }
 
 
@@ -286,10 +368,10 @@ li {
 .cards-long {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 72px 1fr 72px 1fr;
+    grid-template-rows: 48px 1fr 48px 1fr;
     align-items: center;
     grid-auto-flow: row;
-    gap: 1.5em;
+    gap: 2em;
     margin-bottom: 4em;
     margin-right: 0.5em;
     
@@ -298,7 +380,7 @@ li {
 .outside-card-2, .outside-card-3 {
     /* margin-left: 1.5em; */
     margin-bottom: 0;
-    
+
     padding-top: 2em;
     font-size: large;
     font-weight: bold;
@@ -312,6 +394,7 @@ li {
     /* margin-left: 0.5em; */
     padding: 1em;
     box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgb(224, 224, 224);
     width: 80%;
     height: 100%;
     border-radius: 0.5em;
@@ -325,6 +408,7 @@ li {
     padding: 1em;
     padding-bottom: em;
     box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgb(224, 224, 224);
     width: 80%;
     height: 100%;
     border-radius: 0.5em;
