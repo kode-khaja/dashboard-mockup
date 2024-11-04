@@ -1,0 +1,331 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+  /* END OF RESET */
+
+.container-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+
+}
+
+
+.header {
+    color: white;
+    background-color: rgb(6, 91, 94);
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-template-columns: 3fr 2fr;
+  
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: end;
+    margin-right: 4em;
+    gap: 2em;
+}
+
+.header-right-text > p {
+   font-size: 1.1em;
+   
+}
+
+.buttons {
+    display: flex;
+    justify-items: space-evenly;
+    gap: 2em;  
+}
+
+button {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    border-radius: 1em;
+    border-color: transparent
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: start;
+    margin-left: 4em;
+    gap: 1em;
+}
+
+input {
+    width: 100%;
+    margin-top: .5em;
+}
+
+
+span {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+.navbar {
+    background-color: rgb(237, 74, 45);
+    color: white;
+    display: grid;
+    grid-template-rows: 100px 1fr 5fr;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+h4 {
+    font-size: 1.7em;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 1.7em;
+    margin-bottom: 0;
+    padding: 0%;
+    display: grid;
+    align-self: center;
+}
+
+ul * {
+    list-style: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: .5em;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    
+    justify-items: start;
+    align-items: start;
+
+}
+
+.settings {
+    margin-top: 2.5em;
+}
+
+li {
+   margin-bottom: 1.3em;
+   display: flex;
+   flex-direction: column;
+
+}
+
+.content-section {
+    background-color: rgb(225, 241, 255);
+    color: rgb(57, 57, 57);
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1em;
+    
+   
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 72px 1fr 1fr 1fr;
+    align-items: start;
+    grid-auto-flow: row;
+    gap: 1.5em;
+    margin-bottom: 2em;
+    margin-right: 0.5em;
+    
+    
+    
+}
+
+.outside-card-1 {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 2em;
+    margin-bottom: 0;
+    
+    padding-top: 2em;
+    font-size: large;
+    font-weight: bold;
+    align-items: end;
+
+}
+
+/* .card1 {
+    background-color: white;
+    border-left: 8px solid rgb(191, 0, 255);
+    margin-left: 2em;
+    padding: 1em;
+} */
+
+.inside-card-1 {
+    background-color: white;
+    border-left: 8px solid rgb(213, 166, 58);
+    margin-left: 2em;
+   
+    border-radius: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+
+}
+.card3 {
+    background-color: white;
+    border-left: 8px solid rgb(255, 47, 0);
+    margin-left: 2em;
+
+    border-radius: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+}
+.card4 {
+    background-color: white;
+    border-left: 8px solid rgb(0, 26, 255);
+    margin-left: 2em;
+
+    padding: 1em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+}
+.card5 {
+    background-color: white;
+    border-left: 8px solid rgb(8, 116, 19);
+    margin-left: 2em;
+  
+    border-radius: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+}
+
+.card7 {
+    background-color: white;
+    border-left: 8px solid rgb(140, 213, 255);
+    margin-left: 2em;
+
+    border-radius: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+}
+.card8 {
+    background-color: white;
+    border-left: 8px solid rgb(119, 108, 49);
+    margin-left: 2em;
+ 
+    border-radius: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+}
+
+
+
+.cards-long {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 72px 1fr 72px 1fr;
+    align-items: center;
+    grid-auto-flow: row;
+    gap: 1.5em;
+    margin-bottom: 4em;
+    margin-right: 0.5em;
+    
+}
+
+.outside-card-2, .outside-card-3 {
+    /* margin-left: 1.5em; */
+    margin-bottom: 0;
+    
+    padding-top: 2em;
+    font-size: large;
+    font-weight: bold;
+    align-items: end;
+
+}
+
+.card-long2 {
+    background-color: white;
+    border-left: 8px solid rgb(213, 166, 58);
+    /* margin-left: 0.5em; */
+    padding: 1em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    border-radius: 0.5em;
+
+}
+
+.card-long3 {
+    background-color: white;
+    border-left: 8px solid rgb(255, 47, 0);
+    /* margin: 2em; */
+    padding: 1em;
+    padding-bottom: em;
+    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
+    border-radius: 0.5em;
+}
